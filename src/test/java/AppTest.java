@@ -14,18 +14,6 @@ import java.util.logging.Logger;
 public class AppTest {
 
 WebDriver driver;
-
-      public void testSlow() {
-        System.out.println("slow");
-      }
-
-      public void testSlower() {
-        System.out.println("slower");
-      }
-
-      public void testFast() {
-        System.out.println("fast-updated");
-      }
 	
 	@Test	
       public void testCalc() {
@@ -35,7 +23,7 @@ WebDriver driver;
 	System.setProperty("webdriver.gecko.driver",mygecko);
 	driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://localhost:8080/HelloWebAppProject/hello");
+        driver.get("http://localhost:8080/HelloWeb/hello");
 
        try 
  	{
