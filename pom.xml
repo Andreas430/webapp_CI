@@ -70,7 +70,7 @@
             <format>xml</format>
           </formats>
           <check>
-            <haltOnFailure>false</haltOnFailure>
+            <haltOnFailure>true</haltOnFailure>
             <lineRate>85</lineRate>
             <branchRate>49</branchRate>
             <totalLineRate>95</totalLineRate>
