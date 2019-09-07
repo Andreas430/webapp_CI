@@ -6,11 +6,11 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
 	  <servlet-name>HelloWeb</servlet-name>
-	  <servlet-class>com.mycomp.webapp.HelloWebApp</servlet-class>
+	  <servlet-class>com.amdocs.webapp.HelloWebApp</servlet-class>
   </servlet>
   
   <servlet-mapping>
 	  <servlet-name>HelloWeb</servlet-name>
-	  <url-pattern>/hello/*</url-pattern>
+	  <url-pattern>/*</url-pattern>
   </servlet-mapping>
 </web-app>

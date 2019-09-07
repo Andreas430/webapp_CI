@@ -1,4 +1,4 @@
-package com.mycomp.webapp;
+package com.amdocs.webapp;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import java.io.*;
@@ -34,9 +34,10 @@ public class HelloWebAppTest extends Mockito{
         
     }
    
-    public void testemb() throws Exception {
+    @Test
+    public void testSub() throws Exception {
 
-        int k= new HelloWebApp().rem(8,7);
+        int k= new HelloWebApp().sub(8,7);
         assertEquals("Add",k,1);
 
     }

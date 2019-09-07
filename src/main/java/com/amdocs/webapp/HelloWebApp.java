@@ -1,4 +1,4 @@
-package com.mycomp.webapp;
+package com.amdocs.webapp;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +14,7 @@ public class HelloWebApp extends HttpServlet {
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 	         throws ServletException, IOException {
             resp.setContentType("text/plain");
-            resp.getWriter().write("Hello World! Maven Web Project Example.");
+            resp.getWriter().write("Hello World! \n\n\nJava Project for DevOps hands-on Workshop in BriteBill, Spain.\n\n\n");
         }
 
 
@@ -22,7 +22,7 @@ public class HelloWebApp extends HttpServlet {
             return a + b;
         }
 
-	public int rem(int a, int b) {
+	public int sub(int a, int b) {
             return a - b;
         }
 
