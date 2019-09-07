@@ -34,7 +34,6 @@ public class HelloWebAppTest extends Mockito{
         
     }
    
-    @Test
     public void testSub() throws Exception {
 
         int k= new HelloWebApp().sub(8,7);
