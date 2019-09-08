@@ -5,9 +5,8 @@ import java.io.*;
 import javax.servlet.http.*;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
-import org.mockito.Mockito;
 
-public class HelloWebAppTest extends Mockito{
+public class HelloWebAppTest {
 
     @Test
     public void testServlet() throws Exception {
@@ -27,17 +26,11 @@ public class HelloWebAppTest extends Mockito{
     }
 
     @Test
-    public void testAdd() throws Exception {
-
-        int k= new HelloWebApp().add(5,5);
-        assertEquals("Add", 10, k);
-        
+    public void testAvg() throws Exception {
+	Calculator calc = mock(Calculator.class);
+	when(calc.add(4, 6)).thenReturn(10);
+	int k = new HellowWebApp(calc).avg(4, 6);
+	assertEquals("Avg", 5, k);
     }
-   
-    public void testSub() throws Exception {
 
-        int k= new HelloWebApp().sub(8,7);
-        assertEquals("Sub", 1, k);
-
-    }
 }

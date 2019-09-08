@@ -9,6 +9,8 @@ import java.util.Date;
 
 public class HelloWebApp extends HttpServlet {
 
+	private Calculator calc;
+
 	private static final long serialVersionUID = 1L;
 
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
@@ -18,12 +20,12 @@ public class HelloWebApp extends HttpServlet {
         }
 
 
-        public int add(int a, int b) {
-            return a + b;
-        }
+	public HelloWebApp(Calculator calc) {
+		this.calc = calc;
+	}
 
-	public int sub(int a, int b) {
-            return a - b;
-        }
+	public int avg(int a, int b) {
+	    return calc.add(a, b)/2;
+	}
 
 }
