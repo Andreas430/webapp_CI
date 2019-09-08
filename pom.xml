@@ -5,7 +5,7 @@
   <artifactId>HelloWeb</artifactId>
   <packaging>war</packaging>
   <version>2.0-SNAPSHOT</version>
-  <name>HelloWebAppProject Maven Webapp</name>
+  <name>HelloWeb Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>

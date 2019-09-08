@@ -23,21 +23,21 @@ public class HelloWebAppTest extends Mockito{
         
         writer.flush(); // it may not have been flushed yet...
         System.out.print(stringWriter.toString());
-        assertTrue("Expecting Hello Madrid but not found",stringWriter.toString().contains("Hello Madrid"));
+        assertTrue("MainPage",stringWriter.toString().contains("Hello Limassol"));
     }
 
     @Test
     public void testAdd() throws Exception {
 
         int k= new HelloWebApp().add(5,5);
-        assertEquals("Problem with Add function:", 10, k);
+        assertEquals("Add", 10, k);
         
     }
    
     public void testSub() throws Exception {
 
         int k= new HelloWebApp().sub(8,7);
-        assertEquals("Problem with Sub function:", 1, k);
+        assertEquals("Sub", 1, k);
 
     }
 }
