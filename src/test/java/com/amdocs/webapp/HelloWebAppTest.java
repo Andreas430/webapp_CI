@@ -18,7 +18,8 @@ public class HelloWebAppTest {
         PrintWriter writer = new PrintWriter(stringWriter);
         when(response.getWriter()).thenReturn(writer);
 
-        new HelloWebApp().doGet(request, response);
+	BasicCalculator calc = mock(BasicCalculator.class);
+        new HelloWebApp(calc).doGet(request, response);
         
         writer.flush(); // it may not have been flushed yet...
         System.out.print(stringWriter.toString());
@@ -27,9 +28,9 @@ public class HelloWebAppTest {
 
     @Test
     public void testAvg() throws Exception {
-	Calculator calc = mock(Calculator.class);
+	BasicCalculator calc = mock(BasicCalculator.class);
 	when(calc.add(4, 6)).thenReturn(10);
-	int k = new HellowWebApp(calc).avg(4, 6);
+	int k = new HelloWebApp(calc).avg(4, 6);
 	assertEquals("Avg", 5, k);
     }
 

@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class HelloWebApp extends HttpServlet {
 
-	private Calculator calc;
+	private BasicCalculator calc;
 
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public class HelloWebApp extends HttpServlet {
         }
 
 
-	public HelloWebApp(Calculator calc) {
+	public HelloWebApp(BasicCalculator calc) {
 		this.calc = calc;
 	}
 
