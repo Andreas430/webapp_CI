@@ -20,6 +20,10 @@ public class HelloWebApp extends HttpServlet {
         }
 
 
+	public HelloWebApp() {
+		this.calc = null;
+	}
+
 	public HelloWebApp(BasicCalculator calc) {
 		this.calc = calc;
 	}
