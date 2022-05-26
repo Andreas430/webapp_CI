@@ -45,7 +45,7 @@ public class HelloWebAppIntegrationTest {
     @Test
     public void testCityName() throws Exception {
         driver.get(testURL);
-        assertTrue("Page contains correct city name", driver.getPageSource().contains("Limassol!"));
+        assertTrue("Page contains correct city name", driver.getPageSource().contains("Limassoll!"));
     }
 
     public void captureScreenshot(WebDriver driver, String filename) throws IOException

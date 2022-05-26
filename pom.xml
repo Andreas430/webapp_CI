@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <properties>
     <hubURL>http://10.19.41.77:4444</hubURL>
-    <testURL>http://10.19.41.77:8080</testURL>
+    <testURL>http://10.19.41.77:8080/HelloWeb</testURL>
     <screenshotLocation>${project.build.directory}/screenshot.png</screenshotLocation>
   </properties>
   <dependencies>
