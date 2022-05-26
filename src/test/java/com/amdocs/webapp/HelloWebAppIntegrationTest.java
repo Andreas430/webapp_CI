@@ -23,7 +23,7 @@ public class HelloWebAppIntegrationTest {
     @Before
     public void setUp() throws Exception {
         hubURL = System.getProperty("hubURL");
-        hubURL = System.getProperty("testURL");
+        testURL = System.getProperty("testURL");
         screenshotLocation = System.getProperty("screenshotLocation");
 
         DesiredCapabilities caps = new DesiredCapabilities();
