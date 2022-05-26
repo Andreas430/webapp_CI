@@ -42,6 +42,12 @@ public class HelloWebAppIntegrationTest {
         captureScreenshot(driver, screenshotLocation);
     }
 
+    @Test
+    public void testCityName() throws Exception {
+        driver.get(testURL);
+        assertTrue("Page contains correct city name", driver.getPageSource().contains("Limassol!"));
+    }
+
     public void captureScreenshot(WebDriver driver, String filename) throws IOException
 	{
 		
