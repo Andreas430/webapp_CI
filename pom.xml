@@ -7,6 +7,11 @@
   <version>2.0-SNAPSHOT</version>
   <name>HelloWeb Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <hubURL>http://10.19.41.77:4444</hubURL>
+    <testURL>http://10.19.41.77:8080/HelloWeb</testURL>
+    <screenshotLocation>${project.build.directory}/screenshot.png</screenshotLocation>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -45,8 +50,8 @@
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>3.13.0</version>
+      <artifactId>selenium-support</artifactId>
+      <version>4.1.4</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -94,6 +99,15 @@
         <configuration>
           <linkXRef>false</linkXRef>
           <targetJdk>1.6</targetJdk>
+        </configuration>
+      </plugin>
+      <plugin>
+      	<artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12.4</version>
+        <configuration>
+          <excludes>
+            <exclude>**/*IntegrationTest.java</exclude>
+          </excludes>
         </configuration>
       </plugin>
     </plugins>
@@ -148,4 +162,30 @@
       <url>http://localhost:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
   </distributionManagement>
+  <profiles>
+    <profile>
+      <id>integrationtests</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.12.4</version>
+            <configuration>
+              <excludes>
+                <exclude>none</exclude>
+              </excludes>
+              <includes>
+                <include>**/*IntegrationTest.java</include>
+              </includes>
+              <systemPropertyVariables>
+                <hubURL>${hubURL}</hubURL>
+                <testURL>${testURL}</testURL>
+                <screenshotLocation>${screenshotLocation}</screenshotLocation>
+              </systemPropertyVariables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
