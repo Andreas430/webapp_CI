@@ -27,7 +27,7 @@ public class HelloWebAppIntegrationTest {
         screenshotLocation = System.getProperty("screenshotLocation");
 
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setBrowserName("chrome");
+        //caps.setBrowserName("chrome");
         driver = new RemoteWebDriver(new URL(hubURL), caps);
     }
 
