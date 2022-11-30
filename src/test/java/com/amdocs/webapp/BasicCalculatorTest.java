@@ -10,7 +10,7 @@ public class BasicCalculatorTest {
         assertEquals("Add", 10, k);
         
     }
-   
+    @Test   
     public void testSub() throws Exception {
 
         int k= new BasicCalculator().sub(8,7);
