@@ -16,7 +16,7 @@ public class HelloWebApp extends HttpServlet {
         protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 	         throws ServletException, IOException {
             resp.setContentType("text/plain");
-            resp.getWriter().write("Hello Limassol! Andreas\n\n\nJava Project for DevOps hands-on Workshop.\n\n\n");
+            resp.getWriter().write("Hello Limassol! Andreas 2nd run\n\n\nJava Project for DevOps hands-on Workshop.\n\n\n");
         }
 
 
